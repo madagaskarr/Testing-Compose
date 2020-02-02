@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         var schedules = SchedulesModel("Snack", "10:00 AM to 11:00 PM", "$14.99 and under per adult", "Quick Service Restaurant")
         var diningExperience = DiningExperienceModel("Dining Experience", "Quick Service")
         var typeOfSCuisine = TypeOfCuisineModel("Type of Cuisine","Vegeterian")
+        var parapgraphOne = ParagraphComponentModel("Escape to an amazing jungle oasis offering fast n easy fare with a sense of adventure in the air!",
+            "An OutPost for All","Explore the wilds of the park, then kick back and enjoy delish dishes amidsts this lush , trader's market")
 
         setContent {
             VerticalScroller {
@@ -31,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                     SchedulesComponent(schedulesModel = schedules)
                     DiningExperienceComponent(diningExperienceModel = diningExperience)
                     TypeOfCuisineComponent(typeOfCuisineModel = typeOfSCuisine)
+                    ParagraphComponentComponent(paragraphComponentModel = parapgraphOne)
                 }
             }
         }
