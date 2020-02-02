@@ -26,7 +26,7 @@ fun MenuActivityTitleComponent(menuActivityTitleModel: MenuActivityTitleModel) {
                 Center {
                     Text(
                         text = menuActivityTitleModel.title,
-                        style = TextStyle(fontSize = 16.sp, fontWeight = FontWeight.Bold, color = Color.Gray),
+                        style = TextStyle(fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.Black),
                         modifier = Spacing(bottom = 18.dp, top = 16.dp, left = 10.dp, right = 10.dp)
                     )
                 }

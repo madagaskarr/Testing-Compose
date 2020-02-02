@@ -26,9 +26,9 @@ fun MenuItemComponent(menuItemModel: MenuItemModel) {
                 FlexRow {
                     expanded(flex = 0.7f) {
                         Column {
-                            Text(menuItemModel.title, style = TextStyle(fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray), modifier = Spacing(left = 16.dp, bottom = 8.dp))
+                            Text(menuItemModel.title, style = TextStyle(fontSize = 16.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray), modifier = Spacing(left = 16.dp, bottom = 12.dp))
 
-                            Text(menuItemModel.ingridients, style = TextStyle(fontSize = 11.sp, fontWeight = FontWeight.Normal, color = Color.DarkGray), modifier = Spacing(left = 16.dp))
+                            Text(menuItemModel.ingridients, style = TextStyle(fontSize = 11.sp, fontWeight = FontWeight.Normal, color = Color.LightGray), modifier = Spacing(left = 16.dp))
 
                         }
                     }
@@ -36,7 +36,7 @@ fun MenuItemComponent(menuItemModel: MenuItemModel) {
                     expanded(flex = 0.3f) {
                         Column {
                             Align(alignment = Alignment.TopRight) {
-                                Text(menuItemModel.price, style = TextStyle(fontSize = 13.sp, fontWeight = FontWeight.Bold, color = Color.Gray), modifier = Spacing(right = 16.dp))
+                                Text(menuItemModel.price, style = TextStyle(fontSize = 13.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray), modifier = Spacing(right = 16.dp))
                             }
 
                         }

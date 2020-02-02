@@ -19,15 +19,34 @@ class MenuActivity : AppCompatActivity() {
     @Composable
     fun maenuActivityContents(context: Context) {
 
-       var menuCategoryTitleModel = MenuCategoryTitleModel("Snacks")
        var menuActivityTitleModel = MenuActivityTitleModel("Menu")
+       var menuCategoryTitleModel = MenuCategoryTitleModel("Snacks")
        var menuItemModelOne = MenuItemModel("Spiced Vegetable Bao", "Chikpeas, Chickpeas Vegetables", "$5.99")
+       var menuItemModelTwo = MenuItemModel("Lime Chicken Bao", "Butternut Squash, Fresh Herbs", "$7.99")
+       var menuItemModelThree = MenuItemModel("Bulgog Beef Bao", "Sweet Chilies, Potatoes", "$11.99")
+       var menuItemModelFour = MenuItemModel("Traditional Pork Lumpia", "Pork, Vegetables, Sweet-Chili Dipping Sauce", "$5.99")
+       var menuItemModelFive = MenuItemModel("Bag of Chips", "Potatoes", "$2.99")
+       var menuCategoryTitleModelTwo = MenuCategoryTitleModel("Desserts")
+       var menuItemModelSix = MenuItemModel("Sweet Lumpia", "Cream Cheese, Pineapple, DOLL Pineaple Dipping Sauce", "$6.99")
+       var menuCategoryTitleModelThree = MenuCategoryTitleModel("Loaded Whips")
+       var menuItemModelSeven = MenuItemModel("Orange-Pineapple Swirl Whip", "Exotic Fruit, Crystallized Hibiscus", "$7.99")
+
+
 
         VerticalScroller {
             Column {
                 MenuActivityTitleComponent(menuActivityTitleModel = menuActivityTitleModel)
                 MenuCategoryTitleComponent(menuCategoryTitleModel = menuCategoryTitleModel)
                 MenuItemComponent(menuItemModel = menuItemModelOne)
+                MenuItemComponent(menuItemModel = menuItemModelTwo)
+                MenuItemComponent(menuItemModel = menuItemModelThree)
+                MenuItemComponent(menuItemModel = menuItemModelFour)
+                MenuItemComponent(menuItemModel = menuItemModelFive)
+                MenuCategoryTitleComponent(menuCategoryTitleModel = menuCategoryTitleModelTwo)
+                MenuItemComponent(menuItemModel = menuItemModelSix)
+                MenuCategoryTitleComponent(menuCategoryTitleModel = menuCategoryTitleModelThree)
+                MenuItemComponent(menuItemModel = menuItemModelSeven)
+
             }
         }
     }
