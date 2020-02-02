@@ -20,10 +20,14 @@ class MenuActivity : AppCompatActivity() {
     fun maenuActivityContents(context: Context) {
 
        var menuCategoryTitleModel = MenuCategoryTitleModel("Snacks")
+       var menuActivityTitleModel = MenuActivityTitleModel("Menu")
+       var menuItemModelOne = MenuItemModel("Spiced Vegetable Bao", "Chikpeas, Chickpeas Vegetables", "$5.99")
 
         VerticalScroller {
             Column {
-                MenuCategoryTitle(menuCategoryTitleModel = menuCategoryTitleModel)
+                MenuActivityTitleComponent(menuActivityTitleModel = menuActivityTitleModel)
+                MenuCategoryTitleComponent(menuCategoryTitleModel = menuCategoryTitleModel)
+                MenuItemComponent(menuItemModel = menuItemModelOne)
             }
         }
     }
