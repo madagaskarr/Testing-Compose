@@ -29,7 +29,6 @@ fun DiningExperienceComponent(diningExperienceModel: DiningExperienceModel)  {
                         modifier = Spacing(top = 13.dp)
                     )
                 }
-
                 Center {
                     Text(
                         text = diningExperienceModel.serviceType,

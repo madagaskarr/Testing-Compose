@@ -1,13 +1,17 @@
 package com.example.testing_compose.composables
 
+import android.view.Gravity
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.*
 import androidx.ui.foundation.DrawImage
+import androidx.ui.foundation.shape.corner.RoundedCornerShape
 import androidx.ui.graphics.Color
 import androidx.ui.layout.*
+import androidx.ui.material.Button
 import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
+import androidx.ui.material.surface.Card
 import androidx.ui.material.surface.Surface
 import androidx.ui.res.imageResource
 import androidx.ui.text.TextStyle
@@ -19,28 +23,48 @@ fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel) {
 
     MaterialTheme {
         Surface {
+            Column(modifier = Spacing(top = 25.dp)) {
+                FlexRow {
+                    expanded(flex = 1f) {
+                        Column {
+                            Center {
+                                Container(height = 40.dp, width = 40.dp) {
+                                    DrawImage(image = +imageResource(findOnMapViewMenuModel.findOnMapImage))
+                                }
+                            }
+                            Center {
+                                Text(findOnMapViewMenuModel.findOnMapTitle, style = TextStyle(fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray))
 
-            Column {
-                Row {
-                    Column(modifier = Spacing(left = 60.dp, top = 25.dp, bottom = 25.dp)) {
-                        Container(expanded = true, height = 50.dp, width = 50.dp, modifier = Spacing(left = 16.dp, top = 7.dp)) {
-                            DrawImage(image = +imageResource(findOnMapViewMenuModel.findOnMapImage))
+                            }
                         }
-                        Text(findOnMapViewMenuModel.findOnMapTitle, style = TextStyle(fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray), modifier = Spacing(left = 5.dp, top = 8.dp))
+                    }
+                    expanded(flex = 1f) {
+                        Column {
+                            Center {
+                                Container(height = 40.dp, width = 40.dp) {
+                                    DrawImage(image = +imageResource(findOnMapViewMenuModel.viewMenuImage))
+                                }
+                            }
+                            Center {
+                                Text(findOnMapViewMenuModel.viewMenuTitle, style = TextStyle(fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray))
+
+                            }
+                        }
                     }
 
-                    Column(modifier = Spacing(left = 90.dp, top = 25.dp, bottom = 30.dp)) {
-                        Container(expanded = true, height = 50.dp, width = 50.dp, modifier = Spacing(left = 16.dp, top = 7.dp)) {
-                            DrawImage(image = +imageResource(findOnMapViewMenuModel.viewMenuImage))
-                        }
-                        Text(findOnMapViewMenuModel.viewMenuTitle, style = TextStyle(fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray), modifier = Spacing(left = 10.dp, top = 8.dp))
-                    }
                 }
                 Opacity(opacity = 0.3f) {
-                    Divider(color = Color.Gray)
+                    Divider(color = Color.Gray, modifier = Spacing(top = 25.dp))
                 }
             }
+
+
+
         }
+
+
+
+
 
 
     }
