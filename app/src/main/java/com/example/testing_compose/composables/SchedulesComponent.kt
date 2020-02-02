@@ -11,6 +11,7 @@ import androidx.ui.material.MaterialTheme
 import androidx.ui.material.surface.Surface
 import androidx.ui.res.imageResource
 import androidx.ui.text.TextStyle
+import androidx.ui.text.font.FontStyle
 import androidx.ui.text.font.FontWeight
 import androidx.ui.text.style.TextGeometricTransform
 import com.example.testing_compose.models.ImageHeaderModel
@@ -20,16 +21,26 @@ import com.example.testing_compose.models.SchedulesModel
 fun SchedulesComponent(schedulesModel: SchedulesModel) {
     MaterialTheme {
         Surface {
-            Center {
-                FlowColumn {
-                    Text(schedulesModel.title, style = TextStyle(fontSize = 12.sp, fontWeight = FontWeight.Normal, color = Color.Gray))
-                    Text(schedulesModel.hours, style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray))
-                    Text(schedulesModel.price, style = TextStyle(fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray))
-                    Text(schedulesModel.type, style = TextStyle(fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray))
+            Column {
+                Center {
+                    Text(text = schedulesModel.title, style = TextStyle(fontSize = 18.sp, color = Color.LightGray), modifier = Spacing(top = 13.dp))
+                }
+
+                Center {
+                    Text(text = schedulesModel.hours, style = TextStyle(fontSize = 24.sp, fontWeight = FontWeight.Bold))
+                }
+
+                Center {
+                    Text(text = schedulesModel.price, style = TextStyle(fontSize = 15.sp))
+                }
+
+                Center {
+                    Text(text = schedulesModel.type, style = TextStyle(fontSize = 12.sp), modifier = Spacing(bottom = 13.dp))
+                }
+                Center {
                     Opacity(opacity = 0.3f) {
                         Divider(color = Color.Gray)
                     }
-
                 }
             }
 
@@ -37,3 +48,4 @@ fun SchedulesComponent(schedulesModel: SchedulesModel) {
     }
 
 }
+
