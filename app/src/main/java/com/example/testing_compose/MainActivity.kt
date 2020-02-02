@@ -3,6 +3,7 @@ package com.example.testing_compose
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.compose.Composable
+import androidx.compose.Context
 import androidx.ui.core.dp
 import androidx.ui.core.setContent
 import androidx.ui.foundation.ScrollerPosition
@@ -16,11 +17,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { mainActivityContent() }
+        setContent { mainActivityContent(this) }
     }
 
     @Composable
-    fun mainActivityContent() {
+    fun mainActivityContent(context: Context) {
 
         var imageHeader = ImageHeaderModel(R.drawable.header_image, R.drawable.baseline_restaurant_black_18dp,"The Tropical Hideway", "Disneyland Park", "Adventureland")
         var findOnMapViewMenu = FindOnMapViewMenuModel(R.drawable.find_on_map, R.drawable.view_menu, "Find on Map", "View Menu")
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         VerticalScroller {
             Column {
                 ImageHeaderComponent(imageHeaderModel = imageHeader)
-                FindOnMapViewMenuComponent(findOnMapViewMenuModel = findOnMapViewMenu)
+                FindOnMapViewMenuComponent(findOnMapViewMenuModel = findOnMapViewMenu, context = context)
                 SchedulesComponent(schedulesModel = schedules)
                 DiningExperienceComponent(diningExperienceModel = diningExperience)
                 TypeOfCuisineComponent(typeOfCuisineModel = typeOfSCuisine)

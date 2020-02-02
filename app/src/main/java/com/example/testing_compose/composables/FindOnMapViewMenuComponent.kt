@@ -1,9 +1,13 @@
 package com.example.testing_compose.composables
 
+import android.content.Context
+import android.content.Intent
 import android.view.Gravity
+import android.widget.Toast
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.*
+import androidx.ui.foundation.Clickable
 import androidx.ui.foundation.DrawImage
 import androidx.ui.foundation.shape.corner.RoundedCornerShape
 import androidx.ui.graphics.Color
@@ -19,7 +23,7 @@ import androidx.ui.text.font.FontWeight
 import com.example.testing_compose.models.FindOnMapViewMenuModel
 
 @Composable
-fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel) {
+fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel, context: Context) {
 
     MaterialTheme {
         Surface {
@@ -28,8 +32,12 @@ fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel) {
                     expanded(flex = 1f) {
                         Column {
                             Center {
-                                Container(height = 40.dp, width = 40.dp) {
-                                    DrawImage(image = +imageResource(findOnMapViewMenuModel.findOnMapImage))
+                                Clickable(onClick = {
+                                    Toast.makeText(context, "You just clicked a Clickable", Toast.LENGTH_LONG).show()
+                                }) {
+                                    Container(height = 40.dp, width = 40.dp) {
+                                        DrawImage(image = +imageResource(findOnMapViewMenuModel.findOnMapImage))
+                                    }
                                 }
                             }
                             Center {
@@ -38,11 +46,17 @@ fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel) {
                             }
                         }
                     }
+                    
                     expanded(flex = 1f) {
                         Column {
                             Center {
-                                Container(height = 40.dp, width = 40.dp) {
-                                    DrawImage(image = +imageResource(findOnMapViewMenuModel.viewMenuImage))
+                                Clickable(onClick = {
+                                    val intent = Intent(context, MenuActivity::class.java)
+                                    context.startActivity(intent)
+                                }) {
+                                    Container(height = 40.dp, width = 40.dp) {
+                                        DrawImage(image = +imageResource(findOnMapViewMenuModel.viewMenuImage))
+                                    }
                                 }
                             }
                             Center {
@@ -61,11 +75,5 @@ fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel) {
 
 
         }
-
-
-
-
-
-
     }
 }
