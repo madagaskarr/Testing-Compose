@@ -30,7 +30,8 @@ class MenuActivity : AppCompatActivity() {
        var menuItemModelSix = MenuItemModel("Sweet Lumpia", "Cream Cheese, Pineapple, DOLL Pineaple Dipping Sauce", "$6.99")
        var menuCategoryTitleModelThree = MenuCategoryTitleModel("Loaded Whips")
        var menuItemModelSeven = MenuItemModel("Orange-Pineapple Swirl Whip", "Exotic Fruit, Crystallized Hibiscus", "$7.99")
-
+       var menuParagraphModelOne = MenuParagraphModel("Menu items and prices are subject to change without notice.")
+       var menuParagraphModelTwo = MenuParagraphModel("Consuming raw or undercooked meats, seafood, shellfish or eggs may increase your risk of food borne ilness.")
 
 
         VerticalScroller {
@@ -46,6 +47,8 @@ class MenuActivity : AppCompatActivity() {
                 MenuItemComponent(menuItemModel = menuItemModelSix)
                 MenuCategoryTitleComponent(menuCategoryTitleModel = menuCategoryTitleModelThree)
                 MenuItemComponent(menuItemModel = menuItemModelSeven)
+                MenuParagraphComponent(menuParagraphModel = menuParagraphModelOne)
+                MenuParagraphComponent(menuParagraphModel = menuParagraphModelTwo)
 
             }
         }
