@@ -20,23 +20,25 @@ import com.example.testing_compose.models.MenuCategoryTitleModel
 //MenuActivityTitleComponent
 @Composable
 fun MenuActivityTitleComponent(menuActivityTitleModel: MenuActivityTitleModel) {
+
     MaterialTheme {
         Surface {
             Column {
                 Center {
                     Text(
                         text = menuActivityTitleModel.title,
-                        style = TextStyle(fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.Black),
+                        style = TextStyle(
+                            fontSize = 18.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.Black
+                        ),
                         modifier = Spacing(bottom = 18.dp, top = 16.dp, left = 10.dp, right = 10.dp)
                     )
                 }
-
-
                 Opacity(opacity = 0.3f) {
                     Divider(color = Color.Gray, height = 2.dp)
                 }
             }
-
         }
     }
 

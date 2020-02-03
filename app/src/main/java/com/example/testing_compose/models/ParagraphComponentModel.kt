@@ -1,6 +1,6 @@
 package com.example.testing_compose.models
 
-class ParagraphComponentModel(
+data class ParagraphComponentModel(
     val text: String,
     val title: String,
     val secondParagraph: String

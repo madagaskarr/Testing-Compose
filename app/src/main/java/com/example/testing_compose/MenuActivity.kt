@@ -11,6 +11,7 @@ import com.example.testing_compose.composables.*
 import com.example.testing_compose.models.*
 
 class MenuActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent { maenuActivityContents(this) }

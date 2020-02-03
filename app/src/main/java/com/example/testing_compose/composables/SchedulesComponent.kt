@@ -19,23 +19,32 @@ import com.example.testing_compose.models.SchedulesModel
 
 @Composable
 fun SchedulesComponent(schedulesModel: SchedulesModel) {
+
     MaterialTheme {
         Surface {
             Column {
                 Center {
-                    Text(text = schedulesModel.title, style = TextStyle(fontSize = 18.sp, color = Color.LightGray), modifier = Spacing(top = 13.dp))
+                    Text(
+                        text = schedulesModel.title,
+                        style = TextStyle(fontSize = 18.sp, color = Color.LightGray),
+                        modifier = Spacing(top = 13.dp)
+                    )
                 }
-
                 Center {
-                    Text(text = schedulesModel.hours, style = TextStyle(fontSize = 24.sp, fontWeight = FontWeight.Bold))
+                    Text(
+                        text = schedulesModel.hours,
+                        style = TextStyle(fontSize = 24.sp, fontWeight = FontWeight.Bold)
+                    )
                 }
-
                 Center {
                     Text(text = schedulesModel.price, style = TextStyle(fontSize = 15.sp))
                 }
-
                 Center {
-                    Text(text = schedulesModel.type, style = TextStyle(fontSize = 12.sp), modifier = Spacing(bottom = 13.dp))
+                    Text(
+                        text = schedulesModel.type,
+                        style = TextStyle(fontSize = 12.sp),
+                        modifier = Spacing(bottom = 13.dp)
+                    )
                 }
                 Center {
                     Opacity(opacity = 0.3f) {
@@ -43,7 +52,6 @@ fun SchedulesComponent(schedulesModel: SchedulesModel) {
                     }
                 }
             }
-
         }
     }
 

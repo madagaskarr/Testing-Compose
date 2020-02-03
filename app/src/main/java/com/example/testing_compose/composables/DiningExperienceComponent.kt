@@ -17,7 +17,7 @@ import androidx.ui.text.font.FontWeight
 import com.example.testing_compose.models.DiningExperienceModel
 
 @Composable
-fun DiningExperienceComponent(diningExperienceModel: DiningExperienceModel)  {
+fun DiningExperienceComponent(diningExperienceModel: DiningExperienceModel) {
 
     MaterialTheme {
         Surface {
@@ -43,7 +43,6 @@ fun DiningExperienceComponent(diningExperienceModel: DiningExperienceModel)  {
                 }
             }
         }
-
     }
-}
 
+}
