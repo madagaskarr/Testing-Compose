@@ -68,9 +68,6 @@ fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel, c
                     Divider(color = Color.Gray, modifier = Spacing(top = 25.dp))
                 }
             }
-
-
-
         }
     }
 }

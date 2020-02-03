@@ -42,7 +42,9 @@ class MainActivity : AppCompatActivity() {
 
         applicationData = listOf(imageHeader, findOnMapViewMenu, schedules, diningExperience, typeOfSCuisine, parapgraph)
 
-        setContent { mainActivityContent(this, applicationData) }
+        setContent {
+            mainActivityContent(this, applicationData)
+        }
     }
 
     @Composable
