@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         // TODO: Now just pretending that I have already converted all data for this activity
         applicationDummyData = getDummyData()
 
-
         setContent {
             mainActivityContent(this, applicationDummyData)
         }
@@ -114,4 +113,5 @@ class MainActivity : AppCompatActivity() {
             parapgraph
         )
     }
+
 }

@@ -1,6 +1,6 @@
 package com.example.testing_compose.models
 
-class TypeOfCuisineModel (
+data class TypeOfCuisineModel (
     val title: String,
     val type: String
 )

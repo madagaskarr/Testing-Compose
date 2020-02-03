@@ -18,20 +18,23 @@ import com.example.testing_compose.models.ParagraphComponentModel
 
 @Composable
 fun MenuCategoryTitleComponent(menuCategoryTitleModel: MenuCategoryTitleModel) {
+
     MaterialTheme {
         Surface {
             Column {
                 Text(
                     text = menuCategoryTitleModel.title,
-                    style = TextStyle(fontSize = 16.sp, fontWeight = FontWeight.Normal, color = Color.Gray),
+                    style = TextStyle(
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Normal,
+                        color = Color.Gray
+                    ),
                     modifier = Spacing(bottom = 18.dp, top = 16.dp, left = 16.dp)
                 )
-
                 Opacity(opacity = 0.3f) {
                     Divider(color = Color.Gray)
                 }
             }
-
         }
     }
 

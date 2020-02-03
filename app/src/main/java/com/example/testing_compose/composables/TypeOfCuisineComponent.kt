@@ -14,13 +14,12 @@ import androidx.ui.material.MaterialTheme
 import androidx.ui.material.surface.Surface
 import androidx.ui.text.TextStyle
 import androidx.ui.text.font.FontWeight
-import com.example.testing_compose.models.SchedulesModel
 import com.example.testing_compose.models.TypeOfCuisineModel
 
-//TypeOfCuisine
 
 @Composable
 fun TypeOfCuisineComponent(typeOfCuisineModel: TypeOfCuisineModel) {
+
     MaterialTheme {
         Surface {
             Column {
@@ -31,7 +30,6 @@ fun TypeOfCuisineComponent(typeOfCuisineModel: TypeOfCuisineModel) {
                         modifier = Spacing(top = 13.dp)
                     )
                 }
-
                 Center {
                     Text(
                         text = typeOfCuisineModel.type,
@@ -45,7 +43,6 @@ fun TypeOfCuisineComponent(typeOfCuisineModel: TypeOfCuisineModel) {
                     }
                 }
             }
-
         }
     }
 

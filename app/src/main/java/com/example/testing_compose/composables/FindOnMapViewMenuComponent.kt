@@ -30,7 +30,11 @@ fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel, c
                         Column {
                             Center {
                                 Clickable(onClick = {
-                                    Toast.makeText(context, "You just clicked a Clickable", Toast.LENGTH_LONG).show()
+                                    Toast.makeText(
+                                        context,
+                                        "You just clicked a Clickable",
+                                        Toast.LENGTH_LONG
+                                    ).show()
                                 }) {
                                     Container(height = 40.dp, width = 40.dp) {
                                         DrawImage(image = +imageResource(findOnMapViewMenuModel.findOnMapImage))
@@ -38,12 +42,17 @@ fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel, c
                                 }
                             }
                             Center {
-                                Text(findOnMapViewMenuModel.findOnMapTitle, style = TextStyle(fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray))
-
+                                Text(
+                                    findOnMapViewMenuModel.findOnMapTitle,
+                                    style = TextStyle(
+                                        fontSize = 15.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = Color.DarkGray
+                                    )
+                                )
                             }
                         }
                     }
-                    
                     expanded(flex = 1f) {
                         Column {
                             Center {
@@ -57,12 +66,18 @@ fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel, c
                                 }
                             }
                             Center {
-                                Text(findOnMapViewMenuModel.viewMenuTitle, style = TextStyle(fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.DarkGray))
+                                Text(
+                                    findOnMapViewMenuModel.viewMenuTitle,
+                                    style = TextStyle(
+                                        fontSize = 15.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = Color.DarkGray
+                                    )
+                                )
 
                             }
                         }
                     }
-
                 }
                 Opacity(opacity = 0.3f) {
                     Divider(color = Color.Gray, modifier = Spacing(top = 25.dp))
@@ -70,4 +85,5 @@ fun FindOnMapViewMenuComponent(findOnMapViewMenuModel: FindOnMapViewMenuModel, c
             }
         }
     }
+
 }
