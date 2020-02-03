@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO: Create LiveData parser for generic list of application components
+        // TODO: Create LiveData and a parser for generic list of application components
 
         applicationComponents = mapOf(
             "ImageHeaderModel" to ImageHeaderModel::class.java,
@@ -41,10 +41,6 @@ class MainActivity : AppCompatActivity() {
             "An Outpost for All","Explore the wilds of the park, then kick back and enjoy delish dishes amidsts this lush , trader's market")
 
         applicationData = listOf(imageHeader, findOnMapViewMenu, schedules, diningExperience, typeOfSCuisine, parapgraph)
-
-
-
-
 
         setContent { mainActivityContent(this, applicationData) }
     }
