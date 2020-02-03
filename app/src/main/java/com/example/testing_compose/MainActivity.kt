@@ -13,30 +13,22 @@ import com.example.testing_compose.models.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var applicationComponents: Map<String, Any>
-    private lateinit var applicationData: List<Any>
+    private lateinit var applicationDummyData: List<Any>
+    private lateinit var applicationRealData: List<Any>
     private lateinit var parcedList: MutableMap<Any, Any>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // TODO: Create LiveData and a parser for generic list of application components
-
-        applicationComponents = mapOf(
-            "ImageHeaderModel" to ImageHeaderModel::class.java,
-            "FindOnMapViewMenuModel" to FindOnMapViewMenuModel::class.java,
-            "SchedulesModel" to SchedulesModel::class.java,
-            "DiningExperienceModel" to DiningExperienceModel::class.java,
-            "TypeOfCuisineModel" to TypeOfCuisineModel::class.java,
-            "ParagraphComponentModel" to ParagraphComponentModel::class.java
-        )
-        parcedList = mutableMapOf()
+        applicationRealData = getRealData()
 
         // TODO: Now just pretending that I have already converted all data for this activity
-        applicationData = getDummyData()
+        applicationDummyData = getDummyData()
 
 
         setContent {
-            mainActivityContent(this, applicationData)
+            mainActivityContent(this, applicationDummyData)
         }
     }
 
@@ -64,6 +56,21 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun getRealData(): List<Any> {
+        applicationComponents = mapOf(
+            "ImageHeaderModel" to ImageHeaderModel::class.java,
+            "FindOnMapViewMenuModel" to FindOnMapViewMenuModel::class.java,
+            "SchedulesModel" to SchedulesModel::class.java,
+            "DiningExperienceModel" to DiningExperienceModel::class.java,
+            "TypeOfCuisineModel" to TypeOfCuisineModel::class.java,
+            "ParagraphComponentModel" to ParagraphComponentModel::class.java
+        )
+        parcedList = mutableMapOf()
+
+        // Just for now
+        return listOf()
     }
 
     private fun getDummyData(): List<Any> {
